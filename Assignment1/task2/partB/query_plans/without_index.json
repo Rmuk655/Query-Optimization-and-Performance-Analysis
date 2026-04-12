@@ -1,0 +1,25 @@
+ [                                       
+   {                                     
+     "Plan": {                           
+       "Node Type": "Seq Scan",          
+       "Parallel Aware": false,          
+       "Async Capable": false,           
+       "Relation Name": "lineitem",      
+       "Alias": "lineitem",              
+       "Startup Cost": 0.00,             
+       "Total Cost": 1874969.65,         
+       "Plan Rows": 29813187,            
+       "Plan Width": 117,                
+       "Actual Startup Time": 0.308,     
+       "Actual Total Time": 14543.807,   
+       "Actual Rows": 29991703,          
+       "Actual Loops": 1,                
+       "Filter": "(l_quantity <= 25.0)", 
+       "Rows Removed by Filter": 29994349
+     },                                  
+     "Planning Time": 5.237,             
+     "Triggers": [                       
+     ],                                  
+     "Execution Time": 15482.236         
+   }                                     
+ ]

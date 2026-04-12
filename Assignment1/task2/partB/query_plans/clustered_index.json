@@ -1,0 +1,27 @@
+ [                                          
+   {                                        
+     "Plan": {                              
+       "Node Type": "Index Scan",           
+       "Parallel Aware": false,             
+       "Async Capable": false,              
+       "Scan Direction": "Forward",         
+       "Index Name": "idx_l_quantity",      
+       "Relation Name": "lineitem",         
+       "Alias": "lineitem",                 
+       "Startup Cost": 0.56,                
+       "Total Cost": 1423998.80,            
+       "Plan Rows": 30141785,               
+       "Plan Width": 117,                   
+       "Actual Startup Time": 0.598,        
+       "Actual Total Time": 50436.570,      
+       "Actual Rows": 29991703,             
+       "Actual Loops": 1,                   
+       "Index Cond": "(l_quantity <= 25.0)",
+       "Rows Removed by Index Recheck": 0   
+     },                                     
+     "Planning Time": 8.158,                
+     "Triggers": [                          
+     ],                                     
+     "Execution Time": 52627.267            
+   }                                        
+ ]

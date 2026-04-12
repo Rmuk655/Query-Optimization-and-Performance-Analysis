@@ -1,0 +1,45 @@
+ [                                             
+   {                                           
+     "Plan": {                                 
+       "Node Type": "Bitmap Heap Scan",        
+       "Parallel Aware": false,                
+       "Async Capable": false,                 
+       "Relation Name": "lineitem",            
+       "Alias": "lineitem",                    
+       "Startup Cost": 558499.84,              
+       "Total Cost": 2422482.22,               
+       "Plan Rows": 29813068,                  
+       "Plan Width": 117,                      
+       "Actual Startup Time": 2973.417,        
+       "Actual Total Time": 21532.068,         
+       "Actual Rows": 29991703,                
+       "Actual Loops": 1,                      
+       "Recheck Cond": "(l_quantity <= 25.0)", 
+       "Rows Removed by Index Recheck": 26,    
+       "Exact Heap Blocks": 35686,             
+       "Lossy Heap Blocks": 526482,            
+       "Plans": [                              
+         {                                     
+           "Node Type": "Bitmap Index Scan",   
+           "Parent Relationship": "Outer",     
+           "Parallel Aware": false,            
+           "Async Capable": false,             
+           "Index Name": "idx_l_quantity",     
+           "Startup Cost": 0.00,               
+           "Total Cost": 551046.57,            
+           "Plan Rows": 29813068,              
+           "Plan Width": 0,                    
+           "Actual Startup Time": 2949.838,    
+           "Actual Total Time": 2949.839,      
+           "Actual Rows": 29991703,            
+           "Actual Loops": 1,                  
+           "Index Cond": "(l_quantity <= 25.0)"
+         }                                     
+       ]                                       
+     },                                        
+     "Planning Time": 0.176,                   
+     "Triggers": [                             
+     ],                                        
+     "Execution Time": 23005.635               
+   }                                           
+ ]

@@ -1,0 +1,205 @@
+[
+  {
+    "Plan": {
+      "Node Type": "Aggregate",
+      "Strategy": "Plain",
+      "Partial Mode": "Finalize",
+      "Parallel Aware": false,
+      "Async Capable": false,
+      "Startup Cost": 152419.29,
+      "Total Cost": 152419.30,
+      "Plan Rows": 1,
+      "Plan Width": 32,
+      "Actual Startup Time": 170.989,
+      "Actual Total Time": 188.398,
+      "Actual Rows": 1.00,
+      "Actual Loops": 1,
+      "Disabled": false,
+      "Shared Hit Blocks": 94026,
+      "Shared Read Blocks": 788,
+      "Shared Dirtied Blocks": 0,
+      "Shared Written Blocks": 0,
+      "Local Hit Blocks": 0,
+      "Local Read Blocks": 0,
+      "Local Dirtied Blocks": 0,
+      "Local Written Blocks": 0,
+      "Temp Read Blocks": 0,
+      "Temp Written Blocks": 0,
+      "Plans": [
+        {
+          "Node Type": "Gather",
+          "Parent Relationship": "Outer",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Startup Cost": 152419.07,
+          "Total Cost": 152419.28,
+          "Plan Rows": 2,
+          "Plan Width": 32,
+          "Actual Startup Time": 170.659,
+          "Actual Total Time": 188.384,
+          "Actual Rows": 3.00,
+          "Actual Loops": 1,
+          "Disabled": false,
+          "Workers Planned": 2,
+          "Workers Launched": 2,
+          "Single Copy": false,
+          "Shared Hit Blocks": 94026,
+          "Shared Read Blocks": 788,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0,
+          "Plans": [
+            {
+              "Node Type": "Aggregate",
+              "Strategy": "Plain",
+              "Partial Mode": "Partial",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Startup Cost": 151419.07,
+              "Total Cost": 151419.08,
+              "Plan Rows": 1,
+              "Plan Width": 32,
+              "Actual Startup Time": 159.823,
+              "Actual Total Time": 159.824,
+              "Actual Rows": 1.00,
+              "Actual Loops": 3,
+              "Disabled": false,
+              "Shared Hit Blocks": 94026,
+              "Shared Read Blocks": 788,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0,
+              "Workers": [
+              ],
+              "Plans": [
+                {
+                  "Node Type": "Bitmap Heap Scan",
+                  "Parent Relationship": "Outer",
+                  "Parallel Aware": true,
+                  "Async Capable": false,
+                  "Relation Name": "lineitem",
+                  "Alias": "lineitem",
+                  "Startup Cost": 12173.34,
+                  "Total Cost": 151182.34,
+                  "Plan Rows": 47345,
+                  "Plan Width": 12,
+                  "Actual Startup Time": 35.476,
+                  "Actual Total Time": 155.741,
+                  "Actual Rows": 38053.33,
+                  "Actual Loops": 3,
+                  "Disabled": false,
+                  "Recheck Cond": "((l_shipdate >= '1994-01-01'::date) AND (l_shipdate < '1995-01-01 00:00:00'::timestamp without time zone))",
+                  "Rows Removed by Index Recheck": 556059,
+                  "Filter": "((l_discount >= 0.05) AND (l_discount <= 0.07) AND (l_quantity < '24'::numeric))",
+                  "Rows Removed by Filter": 265098,
+                  "Exact Heap Blocks": 23148,
+                  "Lossy Heap Blocks": 12754,
+                  "Shared Hit Blocks": 94026,
+                  "Shared Read Blocks": 788,
+                  "Shared Dirtied Blocks": 0,
+                  "Shared Written Blocks": 0,
+                  "Local Hit Blocks": 0,
+                  "Local Read Blocks": 0,
+                  "Local Dirtied Blocks": 0,
+                  "Local Written Blocks": 0,
+                  "Temp Read Blocks": 0,
+                  "Temp Written Blocks": 0,
+                  "Workers": [
+                    {
+                      "Worker Number": 0,
+                      "Exact Heap Blocks": 18736,
+                      "Lossy Heap Blocks": 10312
+                    },
+                    {
+                      "Worker Number": 1,
+                      "Exact Heap Blocks": 18835,
+                      "Lossy Heap Blocks": 10201
+                    }
+                  ],
+                  "Plans": [
+                    {
+                      "Node Type": "Bitmap Index Scan",
+                      "Parent Relationship": "Outer",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Index Name": "i_shipdate",
+                      "Startup Cost": 0.00,
+                      "Total Cost": 12144.93,
+                      "Plan Rows": 901250,
+                      "Plan Width": 0,
+                      "Actual Startup Time": 35.102,
+                      "Actual Total Time": 35.102,
+                      "Actual Rows": 909455.00,
+                      "Actual Loops": 1,
+                      "Disabled": false,
+                      "Index Cond": "((l_shipdate >= '1994-01-01'::date) AND (l_shipdate < '1995-01-01 00:00:00'::timestamp without time zone))",
+                      "Index Searches": 1,
+                      "Shared Hit Blocks": 0,
+                      "Shared Read Blocks": 788,
+                      "Shared Dirtied Blocks": 0,
+                      "Shared Written Blocks": 0,
+                      "Local Hit Blocks": 0,
+                      "Local Read Blocks": 0,
+                      "Local Dirtied Blocks": 0,
+                      "Local Written Blocks": 0,
+                      "Temp Read Blocks": 0,
+                      "Temp Written Blocks": 0,
+                      "Workers": [
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "Planning": {
+      "Shared Hit Blocks": 19,
+      "Shared Read Blocks": 1,
+      "Shared Dirtied Blocks": 0,
+      "Shared Written Blocks": 0,
+      "Local Hit Blocks": 0,
+      "Local Read Blocks": 0,
+      "Local Dirtied Blocks": 0,
+      "Local Written Blocks": 0,
+      "Temp Read Blocks": 0,
+      "Temp Written Blocks": 0
+    },
+    "Planning Time": 0.146,
+    "Triggers": [
+    ],
+    "JIT": {
+      "Functions": 23,
+      "Options": {
+        "Inlining": false,
+        "Optimization": false,
+        "Expressions": true,
+        "Deforming": true
+      },
+      "Timing": {
+        "Generation": {
+          "Deform": 0.607,
+          "Total": 1.288
+        },
+        "Inlining": 0.000,
+        "Optimization": 1.362,
+        "Emission": 11.772,
+        "Total": 14.423
+      }
+    },
+    "Execution Time": 188.852
+  }
+]

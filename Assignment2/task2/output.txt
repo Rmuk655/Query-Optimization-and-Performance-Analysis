@@ -1,0 +1,23 @@
+
+Query 1:
+Plan Switch 1: 1992-01-07 and 1992-01-08
+Plan Switch 2: 1992-01-27 and 1992-01-28
+Plan Switch 3: 1992-03-28 and 1992-03-29
+
+Query 2:
+Plan Switch 1: 1992-01-01 and 1992-01-02
+Plan Switch 2: 1992-02-21 and 1992-02-22
+Plan Switch 3: 1992-03-18 and 1992-03-19
+Plan Switch 4: 1992-05-24 and 1992-05-25
+Plan Switch 5: 1992-05-25 and 1992-05-26
+Plan Switch 6: 1998-01-09 and 1998-01-10
+
+Query 3:
+Plan Switch 1: 1992-01-04 and 1992-01-05
+Plan Switch 2: 1992-01-19 and 1992-01-20
+Plan Switch 3: 1992-02-18 and 1992-02-19
+Plan Switch 4: 1992-03-15 and 1992-03-16
+Plan Switch 5: 1992-03-20 and 1992-03-21
+Plan Switch 6: 1992-05-26 and 1992-05-27
+Plan Switch 7: 1992-12-15 and 1992-12-16
+Plan Switch 8: 1993-03-13 and 1993-03-14

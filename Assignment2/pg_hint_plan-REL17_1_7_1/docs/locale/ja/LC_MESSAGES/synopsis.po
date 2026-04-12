@@ -1,0 +1,39 @@
+# LANGUAGE message translation file for pg_hint_plan synopsis.
+# Copyright (C) 2012-2024, NIPPON TELEGRAPH AND TELEPHONE CORPORATION
+# This file is distributed under the same license as the pg_hint_plan
+# package.
+# Julien Rouhaud <rjuju123@gmail.com>, 2023.
+# Tatsuro Yamada <yamatattsu@gmail.com>, 2023-2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pg_hint_plan\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-09 10:50+0900\n"
+"PO-Revision-Date: 2023-11-10 08:42+0900\n"
+"Last-Translator: Tatsuro Yamada <yamatattsu@gmail.com>\n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.12.1\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: ../../synopsis.md:1 5f2c3282c7b24c629ef71f0dbfff3d60
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../synopsis.md:3 a16cf76f5d7f484da866552664d1ec30
+msgid "`pg_hint_plan` makes it possible to tweak PostgreSQL execution plans using \"hints\" in SQL comments, as of `/*+ SeqScan(a) */`."
+msgstr "`pg_hint_plan`はSQLコメント内のヒント (`/*+ SeqScan(a) */`など) を用いることで実行計画を制御することができます。"
+
+#: ../../synopsis.md:6 e5e5c5196620409aa703e094e4d8ad9f
+msgid ""
+"PostgreSQL uses a cost-based optimizer, which utilizes data statistics, not static rules.  The planner (optimizer) estimates costs of each possible execution plans for a SQL statement then the execution plan "
+"with the lowest cost is executed.  The planner does its best to select the best execution plan, but is not always perfect, since it doesn't take into account some of the data properties or correlations between "
+"columns."
+msgstr ""
+"PostgreSQLのプランナは静的なルールではなくデータの統計情報を用いたコストベースのオプティマイザを利用しています。プランナ（オプティマイザ）はSQL文に対して可能な限りの実行計画のコストを推定し、最もコストが低い実行"
+"計画を選択します。プランナは最適な実行計画を選択するために最善を尽くしますが、データの特性やカラム間の相関を考慮していないため、必ずしも完璧ではありません。"
