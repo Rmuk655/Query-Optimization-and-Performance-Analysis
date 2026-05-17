@@ -1,18 +1,18 @@
-# DBMS-2: Database Systems Assignments
+# Query Optimization and Performance Analysis
 
-This repository contains my coursework for **Database Management Systems (DBMS-II)**, focusing on practical implementation and analysis of **query optimization, indexing, and performance evaluation** using PostgreSQL.
+This repository contains the practical implementation and analysis of **query optimization, indexing, and performance evaluation** using PostgreSQL.
 
 ---
 
 ## Overview
 
-The project explores how database systems efficiently execute queries using **query optimization techniques and indexing strategies**. Through these assignments, I analyzed and improved query performance using real-world datasets and execution plans.
+The project explores how database systems efficiently execute queries using **query optimization techniques and indexing strategies**. Through this, I analyzed and improved query performance using real-world datasets and execution plans.
 
 ---
 
 ## Repository Structure
 
-DBMS-2/
+Query-Optimization-and-Performance-Analysis/
  ├── Assignment1/
  │    ├── task1/
  │    ├── task2/
