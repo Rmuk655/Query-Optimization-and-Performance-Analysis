@@ -70,12 +70,6 @@ DBMS-2/
 
 ---
 
-## Acknowledgment
-
-Completed as part of DBMS-II coursework at IIT Hyderabad.
-
----
-
 ## Author
 
 Krishnan R  
