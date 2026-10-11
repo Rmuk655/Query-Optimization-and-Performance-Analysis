@@ -1,3 +1,4 @@
+import os
 import psycopg2
 import sys
 import subprocess
@@ -8,7 +9,7 @@ from datetime import timedelta, datetime
 DB_HOST = "localhost"
 DB_NAME = "tpch_db"
 DB_USER = "postgres"
-DB_PASS = "Babloo@1" # for running on teammate's laptop
+DB_PASS = os.environ.get("PGPASSWORD", "postgres")  # set PGPASSWORD to your local database password
 
 TEMPLATES = {
     1: "SELECT SUM(l_quantity), SUM(l_extendedprice), SUM(l_extendedprice * (1 - l_discount)), SUM(l_extendedprice * (1 - l_discount) * (1 + l_tax)), AVG(l_quantity), AVG(l_extendedprice), AVG(l_discount), COUNT(*) FROM lineitem WHERE l_shipdate <= DATE '{}';",

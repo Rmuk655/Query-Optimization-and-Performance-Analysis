@@ -1,3 +1,4 @@
+import os
 import psycopg2
 import sys
 import csv
@@ -14,7 +15,7 @@ def connect_to_db():
             host="localhost",
             database="tpch_db",
             user="postgres",
-            password="postgres"
+            password=os.environ.get("PGPASSWORD", "postgres")
         )
         return conn
     except Exception as e:

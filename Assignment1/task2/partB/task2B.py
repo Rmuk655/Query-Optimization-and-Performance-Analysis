@@ -1,3 +1,4 @@
+import os
 import psycopg2
 import sys
 import time
@@ -20,7 +21,7 @@ def connect_to_db():
             host="localhost",
             database="tpch_db",
             user="postgres",
-            password="MukKed&62"
+            password=os.environ.get("PGPASSWORD", "postgres")
             ## password="postgres"
         )
         return conn

@@ -1,3 +1,4 @@
+import os
 import psycopg2
 import sys
 # csv imported for creating a file output.csv which task2B.py uses to access the selectivity values.
@@ -26,7 +27,7 @@ def connect_to_db():
             host="localhost",
             database="tpch_db",
             user="postgres",
-            password="MukKed&62"
+            password=os.environ.get("PGPASSWORD", "postgres")
             ## password="postgres"
         )
         return conn
