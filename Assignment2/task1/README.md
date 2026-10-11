@@ -8,7 +8,7 @@ Two Query Plans Pi and Pj are structurally identical if the operator algorithms 
 ---
 
 ### Problem Statement
-Given a PostgreSQL compile time plan for a query instance as input, compute it's Physical Operator Tree for subsequent plan comparison.
+Given a PostgreSQL compile time plan for a query instance as input, compute its Physical Operator Tree for subsequent plan comparison.
 
 Physical Operator Tree: The structure that discounts the query parameter values and other values such as the cost and cardinality estimates that are available in the query plans produced by PostgreSQL.
 

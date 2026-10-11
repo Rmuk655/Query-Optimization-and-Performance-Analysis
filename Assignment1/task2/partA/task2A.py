@@ -68,7 +68,7 @@ def get_quantity_for_selectivity(cursor, selectivity):
     min, max = cursor.fetchone()
     min = float(min)
     max = float(max)
-    # X ~ (max - min) * selecitivity + min by assuming data is pretty uniform across min to max which works if the dataset is
+    # X ~ (max - min) * selectivity + min by assuming data is pretty uniform across min to max which works if the dataset is
     # large enough just like this case.
     quan = (max - min) * selectivity + min
     # We need the total number of rows to update the value of actual_sel in the binary search.

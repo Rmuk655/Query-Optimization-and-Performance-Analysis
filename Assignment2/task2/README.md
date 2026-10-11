@@ -1,7 +1,7 @@
 ## Task 2: Plan Switch Detection (Done on Krishnan's Laptop, Roll no: CS24BTECH11036)
 
 ### Objective
-The objective of this task is to identify all Plan switches where the PostgreSQL optimizer changes it's execution plan strategy as the query parameter varies given a parametrized range query.
+The objective of this task is to identify all Plan switches where the PostgreSQL optimizer changes its execution plan strategy as the query parameter varies given a parametrized range query.
 
 ---
 

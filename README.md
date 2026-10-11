@@ -21,7 +21,8 @@ Query-Optimization-and-Performance-Analysis/
  │    ├── task1/
  │    ├── task2/
  │    ├── task3/
- │    └── task4/
+ │    ├── task4/
+ │    └── pg_hint_plan-REL17_1_7_1/   (third-party PostgreSQL extension, used for plan hints)
 
 ---
 
