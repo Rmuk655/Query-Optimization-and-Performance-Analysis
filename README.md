@@ -36,6 +36,14 @@ Query-Optimization-and-Performance-Analysis/
 
 ---
 
+## Setup
+
+Requires PostgreSQL (the scripts connect to a local server; set `PGPASSWORD`, and the other `PG*` connection variables where the scripts read them) and Python 3:
+
+```bash
+pip install -r requirements.txt     # psycopg2-binary, matplotlib
+```
+
 ## Technologies Used
 
 - PostgreSQL
