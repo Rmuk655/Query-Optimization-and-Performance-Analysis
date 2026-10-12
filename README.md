@@ -38,11 +38,14 @@ Query-Optimization-and-Performance-Analysis/
 
 ## Setup
 
-Requires PostgreSQL (the scripts connect to a local server; set `PGPASSWORD`, and the other `PG*` connection variables where the scripts read them) and Python 3:
+Requires PostgreSQL 17 and Python 3.
 
 ```bash
 pip install -r requirements.txt     # psycopg2-binary, matplotlib
+export PGPASSWORD=<your local postgres password>
 ```
+
+The Python scripts connect to `localhost` as user `postgres` and expect a database named `tpch_db` containing the TPC-H tables (generate and load them with the TPC-H `dbgen` tool; the TPC-H data is not included here). `Assignment2/pg_hint_plan-REL17_1_7_1/` is a vendored copy of the third-party [pg_hint_plan](https://github.com/ossc-db/pg_hint_plan) extension, used for the plan-hint experiments in `Assignment2/task4`, and keeps its own license.
 
 ## Technologies Used
 
