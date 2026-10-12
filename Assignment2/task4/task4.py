@@ -115,14 +115,24 @@ SWITCHES_DATA = [
     }
 ]
 
+_warned_no_cache_clear = False
+
 def clear_system_caches():
+    """Drop the OS page cache and restart PostgreSQL so each run starts cold.
+
+    Needs root and a systemd-managed PostgreSQL. Without them the experiment still
+    runs, but timings are warm-cache; a warning is printed once.
+    """
+    global _warned_no_cache_clear
     try:
         subprocess.run(["sh", "-c", "echo 3 > /proc/sys/vm/drop_caches"], check=True)
-        subprocess.run(["systemctl", "restart", "postgresql"], check=True) 
+        subprocess.run(["systemctl", "restart", "postgresql"], check=True)
         time.sleep(2)
-    except subprocess.CalledProcessError as e:
-        print(f"\nERROR: Failed to clear caches. 'sudo'?\n{e}")
-        sys.exit(1)
+    except (subprocess.CalledProcessError, FileNotFoundError, PermissionError) as e:
+        if not _warned_no_cache_clear:
+            print(f"\nWARNING: could not clear caches ({e}); run as root with a systemd "
+                  "PostgreSQL for cold-cache timings. Continuing with warm caches.")
+            _warned_no_cache_clear = True
 
 def run_and_measure(query_template, date_val, hint, query_no):
     clear_system_caches()

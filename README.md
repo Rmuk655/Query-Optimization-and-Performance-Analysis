@@ -61,7 +61,7 @@ Verified against a scale-0.1 database:
 | `Assignment2/task1/task1.py` | runs; compares the two stored plans |
 | `Assignment2/task2/task2.py` | runs; reports plan switches per query |
 
-`Assignment2/task4/task4.py` also needs the `pg_hint_plan` extension (loaded via `shared_preload_libraries`) and an index on `lineitem(l_shipdate)`, and it drops OS caches between runs, which requires root (`echo 3 > /proc/sys/vm/drop_caches`). `Assignment2/pg_hint_plan-REL17_1_7_1/` is a vendored copy of the third-party [pg_hint_plan](https://github.com/ossc-db/pg_hint_plan) extension and keeps its own license.
+`Assignment2/task4/task4.py` also needs the `pg_hint_plan` extension (loaded via `shared_preload_libraries`) and an index on `lineitem(l_shipdate)`, and it drops OS caches and restarts PostgreSQL between runs for cold-cache timings, which requires root and a systemd-managed server (`echo 3 > /proc/sys/vm/drop_caches`). Without them it prints a warning and continues with warm caches. `Assignment2/pg_hint_plan-REL17_1_7_1/` is a vendored copy of the third-party [pg_hint_plan](https://github.com/ossc-db/pg_hint_plan) extension and keeps its own license.
 
 Results depend on the scale factor and machine, so plan-switch dates and timings will differ from the committed analysis PDFs (which used scale 10).
 
