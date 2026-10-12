@@ -28,7 +28,6 @@ def connect_to_db():
             database="tpch_db",
             user="postgres",
             password=os.environ.get("PGPASSWORD", "postgres")
-            ## password="postgres"
         )
         return conn
     except Exception as e:
